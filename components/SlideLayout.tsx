@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface SlideLayoutProps {
@@ -26,26 +25,26 @@ export const SlideLayout: React.FC<SlideLayoutProps> = ({
 
   return (
     <div 
-      className={`pdf-slide slide-aspect-ratio w-full max-w-[1120px] bg-white relative overflow-hidden flex flex-col shadow-xl print:shadow-none print:border-none border border-slate-100 ${className}`}
+      className={`pdf-slide slide-aspect-ratio w-full max-w-[1120px] bg-white relative overflow-hidden flex flex-col border border-slate-100 ${className}`}
       style={style}
     >
       {!isCover && (
-        <div className="w-full bg-white border-b border-slate-100 px-12 py-5 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-             <div className="w-1 h-6 bg-[#50C878] rounded-full"></div>
+        <div className="w-full bg-white border-b border-slate-100 px-14 py-6 flex justify-between items-center relative z-10">
+          <div className="flex items-center gap-5">
+             <div className="w-1.5 h-10 bg-[#247e38] rounded-full"></div>
              <div>
-               <h3 className="text-[10px] font-extrabold text-[#50C878] tracking-[0.2em] uppercase leading-none mb-1 font-heading">
-                 Quality Report
+               <h3 className="text-[10px] font-black text-[#247e38] tracking-[0.35em] uppercase leading-none mb-1.5 font-heading">
+                 Compliance Audit
                </h3>
-               <p className="text-sm font-bold text-[#333333] leading-none truncate max-w-[600px]">
-                 {projectName || 'Pharmacy Audit Details'}
+               <p className="text-base font-extrabold text-slate-800 leading-none truncate max-w-[500px] tracking-tight">
+                 {projectName || 'Field Verification Details'}
                </p>
              </div>
           </div>
           <div className="text-right">
-             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-0.5">Inspection Date</span>
-             <span className="text-xs font-bold text-[#333333] tracking-tighter">
-               {reportDate || 'N/A'}
+             <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block mb-1">Observation Date</span>
+             <span className="text-sm font-black text-slate-800 tracking-tight">
+               {reportDate || '—'}
              </span>
           </div>
         </div>
@@ -56,15 +55,14 @@ export const SlideLayout: React.FC<SlideLayoutProps> = ({
       </div>
 
       {!isCover && (
-        <div className="px-12 py-3 bg-[#F5F5F5] border-t border-slate-100 flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            {/* Footer labels removed as requested */}
-            <span className="text-[8px] font-bold text-slate-400 uppercase tracking-[0.2em]">
-            </span>
+        <div className="px-14 py-4 bg-white border-t border-slate-100 flex justify-between items-center relative z-10">
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 rounded-sm bg-[#247e38]/20 rotate-45"></div>
+            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.25em]">Quality Assurance Protocols</span>
           </div>
           <div className="flex items-center gap-4">
-             <span className="text-[10px] font-bold text-[#333333] font-heading tracking-widest">
-               PAGE {pageNumber} / {totalPage}
+             <span className="text-[10px] font-black text-slate-800 font-heading tracking-[0.2em] uppercase">
+               Page {pageNumber} / {totalPage}
              </span>
           </div>
         </div>
