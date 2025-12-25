@@ -1,0 +1,7 @@
+{
+  "name": "MEP Inspection Generator V2",
+  "description": "Professional MEP (Mechanical, Electrical, Plumbing) Inspection Report Generator with AI-powered observation analysis and 16:9 slide-based PDF export.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
